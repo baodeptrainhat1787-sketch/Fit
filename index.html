@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#172c28">
+<title>Kế hoạch ăn uống & tập luyện</title>
+<style>
+:root{--bg:#f4f6f3;--paper:#fff;--ink:#1c2925;--muted:#62716b;--line:#e1e8e3;--green:#234e43;--soft:#eaf2ed;--gold:#d9a441;--shadow:0 12px 35px rgba(26,52,43,.07)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{width:min(920px,100% - 32px);margin:auto}.hero{background:var(--green);color:#fff;padding:42px 0 34px}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;font-weight:700;color:#c8dfd3}.hero h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.12;margin:10px 0 14px;letter-spacing:-.04em}.hero p{max-width:660px;color:#e0ebe5;margin:0}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.chip{border:1px solid #67877b;border-radius:99px;padding:5px 11px;font-size:.84rem;color:#f4faf6}
+nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:10px;padding-bottom:10px}nav a{white-space:nowrap;text-decoration:none;color:var(--green);font-size:.86rem;font-weight:650;padding:7px 11px;border-radius:99px}nav a:hover{background:var(--soft)}
+main{padding:28px 0 60px}.section{margin:28px 0;scroll-margin-top:72px}.section-head{margin-bottom:14px}.kicker{color:var(--green);font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.section h2{font-size:clamp(1.45rem,4vw,2rem);line-height:1.2;letter-spacing:-.025em;margin:4px 0 8px}.section-intro{color:var(--muted);margin:0}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(17px,3vw,25px);box-shadow:var(--shadow);margin:14px 0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{background:var(--soft);border-radius:13px;padding:13px}.stat strong{display:block;font-size:1.1rem;color:var(--green)}.stat span{font-size:.83rem;color:var(--muted)}.notice{border-left:4px solid var(--gold);background:#fff9e9;padding:14px 16px;border-radius:0 12px 12px 0;color:#51452b}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:13px}table{border-collapse:collapse;width:100%;min-width:480px;background:#fff}th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}th{background:var(--soft);font-size:.88rem;color:var(--green)}tr:last-child td{border-bottom:0}td:first-child{font-weight:650}.meal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff}.mini h3{margin:0 0 7px;font-size:1.02rem}.mini p{margin:0;color:var(--muted)}ul{padding-left:1.25rem;margin:8px 0}li{margin:4px 0}.day{border:1px solid var(--line);border-radius:14px;margin:12px 0;overflow:hidden;background:#fff}.day summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;font-weight:750;color:var(--green)}.day summary::-webkit-details-marker{display:none}.day summary:after{content:"＋";font-size:1.2rem;color:var(--muted)}.day[open] summary:after{content:"−"}.day .inside{padding:0 18px 18px}.tag{display:inline-block;background:var(--soft);color:var(--green);padding:3px 9px;border-radius:99px;font-size:.8rem;font-weight:700}.checklist{display:grid;gap:10px}.check{display:flex;align-items:flex-start;gap:11px;padding:12px;border:1px solid var(--line);border-radius:12px;cursor:pointer}.check input{width:19px;height:19px;margin-top:3px;accent-color:var(--green);flex-shrink:0}.check span{flex:1}.check input:checked+span{text-decoration:line-through;color:#7b8982}.progress-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;font-size:.9rem;color:var(--muted)}.progress{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:16px}.progress div{height:100%;width:0;background:var(--green);transition:width .2s}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}button{font:inherit;font-weight:700;border:1px solid var(--line);background:#fff;color:var(--green);padding:9px 13px;border-radius:10px;cursor:pointer}button.primary{background:var(--green);color:#fff;border-color:var(--green)}button:hover{filter:brightness(.97)}.footer{color:var(--muted);font-size:.88rem;text-align:center;padding:18px 0 34px}.small{font-size:.9rem;color:var(--muted)}@media(max-width:600px){.hero{padding:32px 0 28px}.stats{grid-template-columns:1fr 1fr}.meal-grid{grid-template-columns:1fr}.wrap{width:min(100% - 22px,920px)}.card{border-radius:15px}th,td{padding:10px 11px}}
+@media print{nav,.actions{display:none}.hero{background:#fff;color:#111;padding:20px 0}.hero p,.eyebrow{color:#333}.card,.day{box-shadow:none;break-inside:avoid}body{background:#fff}.section{margin:18px 0}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="wrap">
+  <div class="eyebrow">Personal plan · phiên bản dễ duy trì</div>
+  <h1>Kế hoạch ăn uống<br>& tập luyện</h1>
+  <p>Một lộ trình đơn giản để ăn đủ chất, xây dựng sức mạnh, cải thiện vóc dáng và vẫn phù hợp với lịch đi học.</p>
+  <div class="chips"><span class="chip">15 tuổi</span><span class="chip">Tập tạ 3 buổi/tuần</span><span class="chip">Ưu tiên vai & tay</span><span class="chip">Tiết kiệm</span></div>
+ </div>
+</header>
+<nav><div class="wrap"><a href="#tong-quan">Tổng quan</a><a href="#an-uong">Ăn uống</a><a href="#tap-luyen">Lịch tập</a><a href="#nghi-ngoi">Ngủ & phục hồi</a><a href="#reminders">Nhắc giờ</a><a href="#checklist">Checklist</a></div></nav>
+<main class="wrap">
+<section class="section" id="tong-quan">
+ <div class="section-head"><div class="kicker">01 · Điểm xuất phát</div><h2>Tổng quan</h2><p class="section-intro">Kế hoạch dựa trên thông tin bạn đã chia sẻ.</p></div>
+ <div class="card">
+  <div class="stats">
+   <div class="stat"><strong>15 tuổi</strong><span>Nam</span></div>
+   <div class="stat"><strong>170 cm</strong><span>Chiều cao</span></div>
+   <div class="stat"><strong>79 kg</strong><span>Cân nặng hiện tại</span></div>
+   <div class="stat"><strong>3 buổi/tuần</strong><span>Tập tạ gợi ý</span></div>
+   <div class="stat"><strong>Vai & tay</strong><span>Nhóm cơ ưu tiên</span></div>
+   <div class="stat"><strong>Cầu lông</strong><span>Vận động bổ sung</span></div>
+  </div>
+ </div>
+ <div class="notice"><strong>Điều quan trọng:</strong> Ở tuổi 15, cơ thể vẫn đang phát triển. Không nhịn ăn, không ép cân nhanh và không tập đến kiệt sức. Hãy ưu tiên ăn đủ chất, ngủ đủ, tập đúng kỹ thuật và tiến bộ từ từ. Không thể giảm mỡ riêng ở bụng hay một vùng cụ thể bằng bài tập tại chỗ.</div>
+</section>
+
+<section class="section" id="an-uong">
+ <div class="section-head"><div class="kicker">02 · Ăn uống</div><h2>Chế độ ăn hằng ngày</h2><p class="section-intro">Bữa sáng nhanh gọn vì bạn cần đi học và thường không đói trước 11h15.</p></div>
+ <div class="card">
+  <span class="tag">Bữa sáng gợi ý</span>
+  <div class="meal-grid" style="margin-top:12px">
+   <div class="mini"><h3>🥣 Sữa chua ít đường</h3><p>1 hộp khoảng 100 g.</p></div>
+   <div class="mini"><h3>🍌 Chuối</h3><p>1 quả vào buổi sáng; có thể mang quả thứ hai đến trường.</p></div>
+  </div>
+  <p>Granola không bắt buộc. Nếu muốn đổi món, có thể dùng một ít yến mạch. Hai quả chuối có thể ăn cùng bữa sáng nếu bạn thích, nhưng chuối không thay thế hoàn toàn protein và chất béo có trong các thực phẩm khác.</p>
+  <p class="small">Nếu đói giữa buổi, ăn quả chuối còn lại. Nếu không đói, có thể để dành. Nếu thấy mệt, chóng mặt hoặc đói cồn cào, đừng cố nhịn.</p>
+ </div>
+ <div class="card">
+  <h3>Khung bữa ăn trong ngày</h3>
+  <div class="table-wrap"><table><thead><tr><th>Bữa</th><th>Gợi ý</th><th>Mục đích</th></tr></thead><tbody>
+   <tr><td>Sáng</td><td>Sữa chua ít đường + chuối</td><td>Nhanh gọn, cung cấp năng lượng</td></tr>
+   <tr><td>Giữa buổi</td><td>Chuối thứ hai nếu đói; uống nước</td><td>Tránh quá đói</td></tr>
+   <tr><td>Trưa · 11h15</td><td>Cơm + thịt/cá/trứng/đậu phụ + rau</td><td>Bữa chính, bổ sung protein và dưỡng chất</td></tr>
+   <tr><td>Xế chiều</td><td>Sữa, sữa chua, trái cây hoặc bánh mì trứng tùy độ đói</td><td>Bổ sung năng lượng</td></tr>
+   <tr><td>Tối</td><td>Cơm + thịt/cá/trứng/đậu phụ + rau</td><td>Phục hồi và phát triển</td></tr>
+   <tr><td>Sau tập nếu đói</td><td>Sữa hoặc bữa ăn bình thường có protein</td><td>Bù năng lượng</td></tr>
+  </tbody></table></div>
+ </div>
+ <div class="card">
+  <h3>Nguyên tắc đơn giản</h3>
+  <ul>
+   <li><strong>Protein:</strong> cố gắng có trứng, thịt, cá, sữa hoặc đậu phụ trong các bữa chính.</li>
+   <li><strong>Tinh bột:</strong> vẫn ăn cơm, khoai, bánh mì hoặc yến mạch; không cần cắt tinh bột để giảm mỡ.</li>
+   <li><strong>Rau và trái cây:</strong> ăn đa dạng mỗi ngày.</li>
+   <li><strong>Nước:</strong> uống đều trong ngày, tăng thêm khi chơi cầu lông hoặc tập ra nhiều mồ hôi.</li>
+   <li><strong>Đồ ngọt:</strong> giảm tần suất nước ngọt và đồ ngọt nếu đang dùng thường xuyên, không cần cấm tuyệt đối.</li>
+   <li><strong>Tiết kiệm:</strong> ưu tiên cơm nhà, trứng, đậu phụ, chuối và sữa chua; không cần mua thực phẩm bổ sung đắt tiền.</li>
+  </ul>
+ </div>
+</section>
+
+<section class="section" id="tap-luyen">
+ <div class="section-head"><div class="kicker">03 · Tập luyện</div><h2>Lịch tập tạ 3 buổi/tuần</h2><p class="section-intro">Khoảng 40–45 phút/buổi. Các ngày có thể đổi theo lịch học và cầu lông.</p></div>
+ <details class="day" open><summary>Thứ 2 — Vai & tay <span class="tag">40–45 phút</span></summary><div class="inside">
+  <div class="table-wrap"><table><thead><tr><th>Bài tập</th><th>Hiệp × lần</th></tr></thead><tbody>
+   <tr><td>Lateral raise — nâng tạ ngang</td><td>3 × 12–15</td></tr><tr><td>Biceps curl — cuốn tạ tay trước</td><td>3 × 10–12</td></tr><tr><td>Triceps extension — duỗi tạ tay sau</td><td>3 × 10–12</td></tr><tr><td>Hammer curl — cuốn tạ kiểu búa</td><td>2 × 10–12</td></tr><tr><td>Front raise — nâng tạ trước</td><td>2 × 10–12, tùy sức</td></tr>
+  </tbody></table></div><p class="small">Nếu vai đã mỏi hoặc đau, bỏ front raise. Không cần tập thêm để “đủ bài”.</p>
+ </div></details>
+ <details class="day"><summary>Thứ 4 — Ngực, lưng & bụng <span class="tag">40–45 phút</span></summary><div class="inside">
+  <div class="table-wrap"><table><thead><tr><th>Bài tập</th><th>Hiệp × lần</th></tr></thead><tbody>
+   <tr><td>Chống đẩy, có thể chống tay lên mặt bàn chắc chắn</td><td>3 × 6–12</td></tr><tr><td>One-arm dumbbell row — chèo tạ một tay</td><td>3 × 10–12 mỗi bên</td></tr><tr><td>Dumbbell floor press — đẩy tạ khi nằm sàn</td><td>2–3 × 8–12</td></tr><tr><td>Dead bug — bài bụng nằm ngửa</td><td>2 × 8–10 mỗi bên</td></tr><tr><td>Plank — giữ người thẳng</td><td>2 × 20–40 giây</td></tr>
+  </tbody></table></div>
+ </div></details>
+ <details class="day"><summary>Thứ 6 — Vai & tay lần hai <span class="tag">40–45 phút</span></summary><div class="inside">
+  <div class="table-wrap"><table><thead><tr><th>Bài tập</th><th>Hiệp × lần</th></tr></thead><tbody>
+   <tr><td>Lateral raise — nâng tạ ngang</td><td>3 × 12–15</td></tr><tr><td>Biceps curl — cuốn tạ tay trước</td><td>3 × 10–12</td></tr><tr><td>Triceps extension — duỗi tạ tay sau</td><td>2–3 × 10–12</td></tr><tr><td>Hammer curl — cuốn tạ kiểu búa</td><td>2 × 10–12</td></tr><tr><td>One-arm dumbbell row — chèo tạ một tay</td><td>2 × 10–12 mỗi bên</td></tr>
+  </tbody></table></div>
+ </div></details>
+ <div class="card"><h3>Lịch cả tuần</h3><div class="table-wrap"><table><thead><tr><th>Ngày</th><th>Hoạt động</th></tr></thead><tbody>
+  <tr><td>Thứ 2</td><td>Tập vai và tay</td></tr><tr><td>Thứ 3</td><td>Cầu lông hoặc nghỉ</td></tr><tr><td>Thứ 4</td><td>Tập ngực, lưng và bụng</td></tr><tr><td>Thứ 5</td><td>Cầu lông hoặc nghỉ</td></tr><tr><td>Thứ 6</td><td>Tập vai và tay</td></tr><tr><td>Thứ 7</td><td>Cầu lông, đi bộ hoặc vận động nhẹ</td></tr><tr><td>Chủ nhật</td><td>Nghỉ và phục hồi</td></tr>
+ </tbody></table></div></div>
+ <div class="card"><h3>Kỹ thuật và tiến độ</h3><ul>
+  <li>Khởi động 5–7 phút, vận động nhẹ và tập thử với tạ nhẹ.</li><li>Nghỉ giữa hiệp khoảng 60–120 giây hoặc lâu hơn nếu cần.</li><li>Chọn mức tạ có thể thực hiện đúng kỹ thuật và vẫn còn sức làm thêm khoảng 2–3 lần.</li><li>Khi làm được số lần tối đa ở mọi hiệp mà vẫn đúng kỹ thuật, hãy tăng số lần hoặc dùng tạ nặng hơn nếu có.</li><li>Nâng tạ có kiểm soát, hạ tạ từ từ, không vung người lấy đà.</li><li>Dừng bài tập nếu đau nhói ở khớp, vai, lưng hoặc khuỷu tay.</li><li>Ưu tiên làm chuẩn biceps curl, lateral raise và triceps extension — các bài bạn đã quen. Bài mới nên bắt đầu nhẹ và nhờ người có kinh nghiệm kiểm tra kỹ thuật.</li>
+ </ul></div>
+</section>
+
+<section class="section" id="nghi-ngoi">
+ <div class="section-head"><div class="kicker">04 · Phục hồi</div><h2>Ngủ nghỉ & theo dõi tiến bộ</h2></div>
+ <div class="card"><div class="table-wrap"><table><thead><tr><th>Việc</th><th>Mục tiêu</th></tr></thead><tbody>
+  <tr><td>Ngủ</td><td>Khoảng 8–10 tiếng mỗi đêm</td></tr><tr><td>Tập tạ</td><td>3 buổi/tuần, đều đặn</td></tr><tr><td>Cầu lông</td><td>Tiếp tục chơi theo thể lực</td></tr><tr><td>Theo dõi sức mạnh</td><td>Ghi số hiệp và số lần sau mỗi buổi</td></tr><tr><td>Theo dõi vóc dáng</td><td>Quan sát thay đổi qua nhiều tuần, không cần cân mỗi ngày</td></tr><tr><td>Phục hồi</td><td>Nghỉ khi mệt bất thường hoặc đau cơ quá nhiều</td></tr>
+ </tbody></table></div></div>
+ <div class="card"><h3>Đánh giá sau 4–8 tuần</h3><ul><li>Bạn có làm được nhiều lần hơn với cùng mức tạ không?</li><li>Kỹ thuật có chuẩn và ổn định hơn không?</li><li>Bạn có thấy khỏe hơn khi chơi cầu lông và học tập không?</li><li>Quần áo và vóc dáng có thay đổi theo hướng mong muốn không?</li><li>Bạn có ngủ tốt, ăn đủ và ít mệt mỏi không?</li></ul></div>
+ <div class="notice">Ở tuổi 15, không nên tự đặt mục tiêu giảm cân thật nhanh hoặc ăn kiêng nghiêm ngặt. Nếu muốn xác định mức cân nặng phù hợp, hãy trao đổi với phụ huynh và nhân viên y tế để đánh giá theo quá trình phát triển.</div>
+</section>
+
+<section class="section" id="reminders">
+ <div class="section-head"><div class="kicker">05 · Nhắc nhở</div><h2>Nhắc giờ tập & giờ ngủ</h2><p class="section-intro">Chọn giờ phù hợp. Thông báo cần được cấp quyền trên Android.</p></div>
+ <div class="card">
+  <div class="meal-grid">
+   <div class="mini"><h3>🏋️ Nhắc tập luyện</h3><label for="workoutTime">Giờ nhắc</label><br><input id="workoutTime" type="time" value="17:00" style="margin:8px 0;padding:9px;border:1px solid var(--line);border-radius:9px;font:inherit"><br><button class="primary" onclick="setReminder('workout',true)">Bật nhắc tập</button> <button onclick="setReminder('workout',false)">Tắt</button></div>
+   <div class="mini"><h3>🌙 Nhắc giờ ngủ</h3><label for="sleepTime">Giờ nhắc</label><br><input id="sleepTime" type="time" value="22:00" style="margin:8px 0;padding:9px;border:1px solid var(--line);border-radius:9px;font:inherit"><br><button class="primary" onclick="setReminder('sleep',true)">Bật nhắc ngủ</button> <button onclick="setReminder('sleep',false)">Tắt</button></div>
+  </div>
+  <p class="small" id="reminderStatus" role="status">Nhắc giờ hoạt động trong bản Android. Nếu đang mở HTML độc lập, tính năng nhắc giờ hệ thống sẽ không hoạt động.</p>
+ </div>
+</section>
+
+<section class="section" id="checklist">
+ <div class="section-head"><div class="kicker">05 · Thói quen</div><h2>Checklist mỗi ngày</h2><p class="section-intro">Đánh dấu khi hoàn thành. Tiến độ được lưu trên trình duyệt của thiết bị này.</p></div>
+ <div class="card">
+  <div class="progress-row"><strong id="progressText">0/5 việc hoàn thành</strong><span id="progressPct">0%</span></div>
+  <div class="progress" aria-label="Tiến độ checklist"><div id="progressBar"></div></div>
+  <h3>Tiến độ 7 ngày gần nhất</h3><p class="small">Tỷ lệ dựa trên số mục checklist đã hoàn thành mỗi ngày trên thiết bị này.</p><div id="weekProgress" class="meal-grid" aria-live="polite"></div>
+  <div class="checklist" id="checks">
+   <label class="check"><input type="checkbox" data-id="breakfast"><span><strong>Ăn sáng trước khi đi học</strong><br><span class="small">Sữa chua ít đường và chuối, tùy mức đói.</span></span></label>
+   <label class="check"><input type="checkbox" data-id="meals"><span><strong>Ăn đủ bữa chính và có protein</strong><br><span class="small">Trứng, thịt, cá, sữa hoặc đậu phụ.</span></span></label>
+   <label class="check"><input type="checkbox" data-id="water"><span><strong>Uống nước đều trong ngày</strong><br><span class="small">Đặc biệt khi tập hoặc chơi cầu lông.</span></span></label>
+   <label class="check"><input type="checkbox" data-id="movement"><span><strong>Tập theo lịch hoặc vận động nhẹ</strong><br><span class="small">Ngày nghỉ cũng là một phần của kế hoạch.</span></span></label>
+   <label class="check"><input type="checkbox" data-id="sleep"><span><strong>Ngủ đủ 8–10 tiếng</strong><br><span class="small">Cố gắng giữ giờ ngủ ổn định.</span></span></label>
+  </div>
+  <div class="actions"><button class="primary" id="reset">Đặt lại checklist hôm nay</button><button id="print">In / lưu PDF</button></div>
+  <p class="small">Checklist lưu cục bộ trên thiết bị và trình duyệt hiện tại. Nếu mở bằng trình duyệt khác hoặc xóa dữ liệu trình duyệt, trạng thái có thể không còn.</p>
+ </div>
+</section>
+<footer class="footer">Bền vững hơn hoàn hảo — làm đều những điều nhỏ mỗi ngày.</footer>
+</main>
+<script>
+(function(){
+ const boxes=[...document.querySelectorAll('#checks input')];
+ const bar=document.getElementById('progressBar'),txt=document.getElementById('progressText'),pct=document.getElementById('progressPct');
+ const dateKey=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+ const dayStorageKey=d=>'fitplan-checklist-'+d;
+ function loadToday(){let saved=[];try{saved=JSON.parse(localStorage.getItem(dayStorageKey(dateKey()))||'[]')}catch(e){}boxes.forEach(b=>b.checked=saved.includes(b.dataset.id));}
+ function update(){const n=boxes.filter(b=>b.checked).length;bar.style.width=(n/boxes.length*100)+'%';txt.textContent=n+'/'+boxes.length+' việc hoàn thành hôm nay';pct.textContent=Math.round(n/boxes.length*100)+'%';renderWeek();}
+ function renderWeek(){const target=document.getElementById('weekProgress');if(!target)return;target.innerHTML='';for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);const key=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');let arr=[];try{arr=JSON.parse(localStorage.getItem(dayStorageKey(key))||'[]')}catch(e){}const pct=Math.round(arr.length/boxes.length*100);const card=document.createElement('div');card.className='mini';card.innerHTML='<strong>'+(['CN','T2','T3','T4','T5','T6','T7'][d.getDay()])+' · '+String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'</strong><div class="progress" style="margin:8px 0"><div style="width:'+pct+'%"></div></div><p>'+arr.length+'/'+boxes.length+' mục · '+pct+'%</p>';target.appendChild(card);}}
+ function save(){try{localStorage.setItem(dayStorageKey(dateKey()),JSON.stringify(boxes.filter(b=>b.checked).map(b=>b.dataset.id)))}catch(e){}update();}
+ boxes.forEach(b=>b.addEventListener('change',save));document.getElementById('reset').addEventListener('click',()=>{boxes.forEach(b=>b.checked=false);save()});document.getElementById('print').addEventListener('click',()=>window.print());loadToday();update();
+ window.setReminder=function(kind,enabled){const id=kind==='sleep'?'sleepTime':'workoutTime';const parts=document.getElementById(id).value.split(':').map(Number);const status=document.getElementById('reminderStatus');if(!window.FitPlanNative||!window.FitPlanNative.setReminder){status.textContent='Tính năng nhắc giờ hệ thống chỉ hoạt động trong app Android FitPlan đã cài đặt.';return;}try{window.FitPlanNative.setReminder(kind,parts[0]||0,parts[1]||0,enabled);status.textContent=enabled?'Đã gửi yêu cầu bật nhắc giờ. Hãy cho phép thông báo nếu Android hỏi.':'Đã gửi yêu cầu tắt nhắc giờ.';}catch(e){status.textContent='Không thể thiết lập nhắc giờ. Hãy kiểm tra quyền thông báo trong cài đặt Android.';}};
+})();
+</script>
+</body>
+</html>
